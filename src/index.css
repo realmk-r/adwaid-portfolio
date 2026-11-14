@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+
+/* 1. Global colors and variables */
+:root {
+  --bg-primary: #080808;
+  --bg-secondary: #111111;
+
+  --accent-red: #ff2525;
+  --accent-dark: #8b0000;
+  --accent-glow: rgba(255, 37, 37, 0.35);
+
+  --text-primary: #f5f5f5;
+  --text-secondary: #999999;
+  --border-color: rgba(255, 255, 255, 0.10);
+
+  --font-main: 'Space Grotesk', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+/* 2. Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 3. Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 4. Main page background */
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(100, 0, 0, 0.15),
+      transparent 55%
+    ),
+    var(--bg-primary);
+
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  overflow-x: hidden;
+}
+
+/* 5. Subtle futuristic grid */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 6. Root React container */
+#root {
+  min-height: 100vh;
+  position: relative;
+  isolation: isolate;
+}
+
+/* 7. Text selection color */
+::selection {
+  background: var(--accent-red);
+  color: white;
+}
+
+/* 8. Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 9. Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
