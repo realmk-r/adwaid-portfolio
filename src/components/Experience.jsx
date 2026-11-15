@@ -50,9 +50,9 @@ function Experience() {
             <h4>CEZEN TECH (ADE-DRDO)</h4>
 
             <p className="experience-description">
-              Working on software development and contributing
-              to improvements in AI-powered document analysis
-              applications.
+            Built an AI-powered document analysis system using Retrieval-Augmented Generation (RAG) to extract
+            insights and answer natural-language queries from structured and unstructured documents with high
+            accuracy.
             </p>
 
             <ul className="experience-points">
